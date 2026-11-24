@@ -13,8 +13,8 @@ module.exports = {
         logo: ['var(--font-michroma)'],
       },
       colors: {
-        'ffp-orange': '#f39200', // Sonik Build Amber/Orange
-        'ffp-charcoal': '#121212',
+        'mrr-white': '#fdfdfd',
+        'mrr-black': '#121212',
       },
       animation: {
         'fade-in-up': 'fadeInUp 0.8s ease-out forwards',

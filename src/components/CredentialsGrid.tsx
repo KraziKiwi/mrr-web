@@ -31,7 +31,7 @@ export default function CredentialsGrid({ credentials = [], settings, isPreview 
           <h2 className="text-3xl md:text-5xl font-heading font-bold uppercase tracking-widest">
             {credentialsHeading}
           </h2>
-          <div className="w-20 h-1 bg-[#f39200] mt-6"></div>
+          <div className="w-20 h-1 bg-mrr-white mt-6"></div>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 border-t border-l border-white/10">

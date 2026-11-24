@@ -28,7 +28,7 @@ export default {
       options: {
         hotspot: true,
       },
-      description: 'Photo of Darryl on site or similar',
+      description: 'Photo of the team on site or similar',
     },
     {
       name: 'points',
@@ -57,18 +57,18 @@ export default {
       initialValue: [
         {
           _type: 'object',
-          title: 'Transparent',
-          description: 'A clear build process. You always know where your job is at.'
+          title: '24/7 Response',
+          description: "Whenever you break down, we're ready to dispatch a truck to your location immediately."
         },
         {
           _type: 'object',
-          title: 'Hands-On',
-          description: 'Our directors are involved in every job, with our own in-house bricklayers and carpenters on the tools.'
+          title: 'Full Workshop',
+          description: 'Our Kaikoura facility is equipped with 3 hoists and a four-poster for comprehensive mechanical repairs.'
         },
         {
           _type: 'object',
-          title: 'Local',
-          description: 'Long-term relationships with local suppliers, trades and partners across Perth and the South West.'
+          title: 'Heavy & Classic',
+          description: 'From dozers and excavators to delicate classic car transportation, we have the specialized gear for the job.'
         }
       ]
     },
@@ -82,7 +82,7 @@ export default {
       name: 'testimonialAuthor',
       title: 'Testimonial Author',
       type: 'string',
-      description: 'The author and location (e.g. JOHN, BUSSELTON)',
+      description: 'The author and location (e.g. JOHN, KAIKOURA)',
     }
   ],
 }

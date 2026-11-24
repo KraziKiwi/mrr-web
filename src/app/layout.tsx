@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter, Montserrat, Michroma } from "next/font/google";
 import "./globals.css";
 import VisualEditing from "../components/VisualEditing";
-import CustomCursor from "../components/CustomCursor";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -21,8 +20,8 @@ const michroma = Michroma({
 });
 
 export const metadata: Metadata = {
-  title: "Future Proof Projects",
-  description: "Renovations, additions and new builds across Perth and the South West. Built to look forward to.",
+  title: "Marlborough Roadside Recovery",
+  description: "Marlborough Roadside Recovery and Towing. Fast, reliable towing and roadside assistance.",
 };
 
 export default function RootLayout({
@@ -33,7 +32,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${montserrat.variable} ${michroma.variable}`}>
       <body className="antialiased">
-        <CustomCursor />
         {children}
         <VisualEditing />
       </body>

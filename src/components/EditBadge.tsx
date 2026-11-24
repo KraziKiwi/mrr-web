@@ -24,7 +24,7 @@ export default function EditBadge({ id, type, path, isPreview }: EditBadgeProps)
   return (
     <button
       data-sanity={sanityDataStr}
-      className="absolute top-4 right-4 bg-[#f39200] text-black px-3 py-1.5 rounded shadow-lg flex items-center gap-2 text-[10px] font-bold tracking-widest uppercase z-50 hover:bg-white hover:text-black transition-colors opacity-0 group-hover:opacity-100"
+      className="absolute top-4 right-4 bg-mrr-white text-black px-3 py-1.5 rounded shadow-lg flex items-center gap-2 text-[10px] font-bold tracking-widest uppercase z-50 hover:bg-white hover:text-black transition-colors opacity-0 group-hover:opacity-100"
       title="Edit this item"
       onClick={(e) => e.stopPropagation()}
     >

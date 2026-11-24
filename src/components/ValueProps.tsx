@@ -5,10 +5,10 @@ import { motion } from 'framer-motion'
 
 export default function ValueProps() {
   const props = [
-    { title: "TRANSPARENT PROCESS", desc: "Regular updates at every stage" },
-    { title: "DIRECTORS ON EVERY JOB", desc: "Hands-on from quote to handover" },
-    { title: "IN-HOUSE TRADES", desc: "Our own bricklaying and carpentry" },
-    { title: "LOCAL PARTNERS", desc: "Trusted Perth & South West suppliers" }
+    { title: "24/7 AVAILABILITY", desc: "Always on call when you need us most" },
+    { title: "FAST DISPATCH", desc: "Quick response times to get you safe" },
+    { title: "HEAVY RECOVERY", desc: "Equipped for large vehicles & machinery" },
+    { title: "LOCAL EXPERTS", desc: "Trusted Kaikoura & Marlborough service" }
   ]
 
   return (

@@ -6,9 +6,9 @@ import { locate } from './src/sanity/presentation/locate'
 
 export default defineConfig({
   name: 'default',
-  title: 'FFP Content Manager',
+  title: 'MRR Content Manager',
 
-  projectId: '7ykhc4pr',
+  projectId: 'do2yl846',
   dataset: 'production',
 
   basePath: '/admin',
@@ -17,7 +17,7 @@ export default defineConfig({
     presentationTool({
       title: 'Command Center',
       previewUrl: {
-        origin: 'https://staging--future-proof-projects.netlify.app',
+        origin: 'http://localhost:3000',
         draftMode: {
           enable: '/api/draft',
         },
@@ -42,9 +42,6 @@ export default defineConfig({
               .title('Services (What We Do)')
               .child(S.documentList().title('Services').filter('_type == "service"')),
             S.listItem()
-              .title('Portfolio Gallery')
-              .child(S.documentList().title('Projects').filter('_type == "project"')),
-            S.listItem()
               .title('Team Members')
               .child(S.documentList().title('Team Members').filter('_type == "teamMember"')),
             S.listItem()
@@ -53,9 +50,6 @@ export default defineConfig({
             S.listItem()
               .title('Service Areas')
               .child(S.documentList().title('Locations').filter('_type == "location"')),
-            S.listItem()
-              .title('Common Questions (FAQ)')
-              .child(S.documentList().title('FAQs').filter('_type == "faq"')),
             S.divider(),
             S.listItem()
               .title('Brand Settings')
@@ -68,4 +62,3 @@ export default defineConfig({
     types: schemaTypes,
   },
 })
-

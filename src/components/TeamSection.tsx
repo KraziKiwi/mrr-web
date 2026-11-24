@@ -22,7 +22,7 @@ export default function TeamSection({ members, settings, isPreview }: { members:
   return (
     <section id="team" className="w-full max-w-6xl mx-auto px-4 py-20 space-y-16 relative z-10">
       <div className="text-center space-y-4 flex flex-col items-center">
-        <h2 className="text-[#f39200] text-sm tracking-[0.3em] font-bold uppercase mb-4 relative inline-block">
+        <h2 className="text-mrr-white text-sm tracking-[0.3em] font-bold uppercase mb-4 relative inline-block">
           <EditBadge id="settings" type="settings" isPreview={isPreview} />
           {teamSubheading}
         </h2>
@@ -57,7 +57,7 @@ export default function TeamSection({ members, settings, isPreview }: { members:
               <h3 className="text-xl font-logo font-bold text-white uppercase tracking-wide">
                 {member.name}
               </h3>
-              <p className="text-ffp-orange text-xs uppercase tracking-[0.2em] font-medium font-logo">
+              <p className="text-mrr-white text-xs uppercase tracking-[0.2em] font-medium font-logo">
                 {member.role}
               </p>
             </div>
@@ -68,7 +68,7 @@ export default function TeamSection({ members, settings, isPreview }: { members:
               </p>
             )}
 
-            <div className="w-8 h-[1px] bg-ffp-orange/50 group-hover:w-full transition-all duration-700" />
+            <div className="w-8 h-[1px] bg-mrr-white/50 group-hover:w-full transition-all duration-700" />
           </div>
         ))}
       </div>

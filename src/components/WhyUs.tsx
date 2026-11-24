@@ -5,20 +5,20 @@ import { motion } from 'framer-motion'
 import EditBadge from './EditBadge'
 import { urlFor } from '../sanity/client'
 
-export default function WhyFutureProof({ missionData, isPreview }: { missionData?: any, isPreview?: boolean }) {
-  const heading = missionData?.heading || "Why Future Proof"
-  const highlightText = missionData?.highlightText || "Built For The Next Stage Of Life"
-  const detailedDescription = missionData?.detailedDescription || "The name is a promise. We modify, extend and build for people who want their home to keep working for them as life changes, whether that's a growing family, working from home or getting older in the place you love."
+export default function WhyUs({ missionData, isPreview }: { missionData?: any, isPreview?: boolean }) {
+  const heading = missionData?.heading || "Why Us"
+  const highlightText = missionData?.highlightText || "Reliable Recovery When You Need It Most"
+  const detailedDescription = missionData?.detailedDescription || "Marlborough Roadside Recovery and Towing operates across the top of the South Island, providing rapid response breakdown recovery, classic car transport, and heavy machinery relocation. With our full mechanical workshop featuring multiple hoists, we don't just tow your vehicle—we can fix it."
 
   const defaultPoints = [
-    { title: "Transparent", description: "A clear build process. You always know where your job is at." },
-    { title: "Hands-On", description: "Our directors are involved in every job, with our own in-house bricklayers and carpenters on the tools." },
-    { title: "Local", description: "Long-term relationships with local suppliers, trades and partners across Perth and the South West." }
+    { title: "24/7 Response", description: "Whenever you break down, we're ready to dispatch a truck to your location immediately." },
+    { title: "Full Workshop", description: "Our Kaikoura facility is equipped with 3 hoists and a four-poster for comprehensive mechanical repairs." },
+    { title: "Heavy & Classic", description: "From dozers and excavators to delicate classic car transportation, we have the specialized gear for the job." }
   ]
   const points = missionData?.points?.length > 0 ? missionData.points : defaultPoints;
 
-  const testimonialText = missionData?.testimonialText || `"Darryl was on site every day and told us the real cost up front. The extension feels like it was always part of the house."`
-  const testimonialAuthor = missionData?.testimonialAuthor || "[CLIENT NAME], [SUBURB]"
+  const testimonialText = missionData?.testimonialText || `"The truck arrived within 20 minutes of my call. The driver was incredibly professional and got my classic car safely back to their workshop without a scratch."`
+  const testimonialAuthor = missionData?.testimonialAuthor || "SARAH, KAIKOURA"
 
   const missionId = missionData?._id
 
@@ -37,12 +37,12 @@ export default function WhyFutureProof({ missionData, isPreview }: { missionData
              {missionData?.image ? (
                <img
                  src={urlFor(missionData.image, 800, 800).url()}
-                 alt="Future Proof Team"
+                 alt="Our Team"
                  className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500 group-hover:scale-105"
                />
              ) : (
                <div className="absolute bottom-6 left-6 text-[10px] text-gray-400 tracking-[0.2em] uppercase font-semibold">
-                  PHOTO: DARRYL ON SITE
+                  PHOTO: TEAM ON SITE
                </div>
              )}
           </motion.div>
@@ -55,11 +55,11 @@ export default function WhyFutureProof({ missionData, isPreview }: { missionData
             className="flex flex-col relative group"
           >
             <EditBadge id={missionId} type="mission" isPreview={isPreview} />
-            <div className="text-[#f39200] text-[10px] tracking-[0.3em] font-bold uppercase mb-4">{heading}</div>
+            <div className="text-mrr-white text-[10px] tracking-[0.3em] font-bold uppercase mb-4">{heading}</div>
             <h2 className="text-4xl md:text-5xl font-heading font-bold uppercase tracking-widest leading-tight">
               {highlightText}
             </h2>
-            <div className="w-20 h-1 bg-[#f39200] mt-6 mb-8"></div>
+            <div className="w-20 h-1 bg-mrr-white mt-6 mb-8"></div>
 
             <p className="text-gray-300 font-light leading-relaxed mb-12">
               {detailedDescription}
@@ -68,7 +68,7 @@ export default function WhyFutureProof({ missionData, isPreview }: { missionData
             <div className="space-y-6">
               {points.map((point: any, idx: number) => (
                 <div key={idx} className="flex flex-col sm:flex-row gap-4 sm:gap-8 border-b border-white/10 pb-6">
-                  <div className="text-[#f39200] text-[11px] font-bold tracking-[0.2em] uppercase w-40 flex-shrink-0 pt-1">{point.title}</div>
+                  <div className="text-mrr-white text-[11px] font-bold tracking-[0.2em] uppercase w-40 flex-shrink-0 pt-1">{point.title}</div>
                   <div className="text-gray-400 font-light text-sm">{point.description}</div>
                 </div>
               ))}
@@ -87,7 +87,7 @@ export default function WhyFutureProof({ missionData, isPreview }: { missionData
             {testimonialText}
           </p>
           <div className="flex items-center justify-center gap-4 text-[10px] font-bold tracking-[0.2em] uppercase">
-            <span className="bg-[#f39200] text-black px-3 py-1">REVIEW</span>
+            <span className="bg-mrr-white text-black px-3 py-1">REVIEW</span>
             <span className="text-gray-400">{testimonialAuthor}</span>
           </div>
         </motion.div>

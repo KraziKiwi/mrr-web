@@ -7,7 +7,7 @@ export default {
       name: 'title',
       title: 'Main Title',
       type: 'string',
-      description: 'The main headline (e.g., Future Proof Projects)',
+      description: 'The main headline (e.g., MRR Content Manager)',
     },
     {
       name: 'subtitle',

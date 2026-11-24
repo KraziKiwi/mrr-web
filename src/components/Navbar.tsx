@@ -38,11 +38,11 @@ export default function Navbar({ settings, logoUrl }: { settings: any, logoUrl: 
           <img
             src={logoUrl}
             alt="Logo"
-            className="h-10 md:h-12 w-auto drop-shadow-md group-hover:scale-105 transition-transform"
+            className="h-12 md:h-14 w-auto drop-shadow-[0_0_10px_rgba(255,255,255,0.2)] group-hover:scale-105 transition-transform"
           />
           <div className="hidden md:flex flex-col font-logo">
-            <span className="text-white font-bold tracking-[0.2em] text-sm md:text-base leading-none">FUTURE PROOF</span>
-            <span className="text-gray-400 font-light tracking-[0.4em] text-[10px] leading-none mt-1">PROJECTS</span>
+            <span className="text-white font-bold tracking-[0.2em] text-sm md:text-base leading-none">MARLBOROUGH</span>
+            <span className="text-gray-400 font-light tracking-[0.4em] text-[10px] leading-none mt-1">RECOVERY</span>
           </div>
         </a>
 
@@ -50,17 +50,17 @@ export default function Navbar({ settings, logoUrl }: { settings: any, logoUrl: 
         <div className="hidden md:flex items-center space-x-8">
           <div className="flex space-x-6 text-[11px] font-heading font-semibold tracking-widest text-gray-300">
             {navLinks.map((link) => (
-              <a key={link.name} href={link.href} className="hover:text-ffp-orange transition-colors">
+              <a key={link.name} href={link.href} className="hover:text-gray-400 transition-colors">
                 {link.name}
               </a>
             ))}
           </div>
 
           <div className="flex items-center space-x-6 border-l border-white/10 pl-6">
-            <a href={`tel:${settings?.phone?.replace(/\s+/g, '')}`} className="text-[#f39200] font-semibold text-sm tracking-widest hover:text-white transition-colors">
+            <a href={`tel:${settings?.phone?.replace(/\s+/g, '')}`} className="text-mrr-white font-semibold text-sm tracking-widest hover:text-gray-300 transition-colors">
               {settings?.phone || "0499 100 711"}
             </a>
-            <a href="#contact" className="bg-[#f39200] hover:bg-amber-500 text-black px-6 py-2.5 rounded-sm font-bold text-[11px] tracking-[0.2em] transition-colors">
+            <a href="#contact" className="bg-mrr-white hover:bg-gray-200 text-black px-6 py-2.5 rounded-sm font-bold text-[11px] tracking-[0.2em] transition-colors">
               GET A QUOTE
             </a>
           </div>
@@ -90,16 +90,16 @@ export default function Navbar({ settings, logoUrl }: { settings: any, logoUrl: 
                   key={link.name}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="text-gray-300 hover:text-ffp-orange font-heading tracking-widest text-sm"
+                  className="text-gray-300 hover:text-mrr-white font-heading tracking-widest text-sm"
                 >
                   {link.name}
                 </a>
               ))}
               <div className="w-full h-px bg-white/10 my-4" />
-              <a href={`tel:${settings?.phone?.replace(/\s+/g, '')}`} className="text-[#f39200] font-semibold tracking-widest">
+              <a href={`tel:${settings?.phone?.replace(/\s+/g, '')}`} className="text-mrr-white font-semibold tracking-widest">
                 {settings?.phone || "0499 100 711"}
               </a>
-              <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="bg-[#f39200] text-black px-6 py-3 rounded-sm font-bold tracking-widest mx-auto mt-2">
+              <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="bg-mrr-white text-black px-6 py-3 rounded-sm font-bold tracking-widest mx-auto mt-2">
                 GET A QUOTE
               </a>
             </div>
