@@ -118,7 +118,7 @@ export default function HomeClient({ heroData, settings, missionData, projects, 
               <img
                 src={logoUrl}
                 alt="Marlborough Roadside Recovery Logo"
-                className="w-full h-auto drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] scale-125"
+                className="w-full h-auto drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] scale-[1.75]"
                 onError={() => setLogoError(true)}
               />
             ) : (

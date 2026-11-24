@@ -38,7 +38,7 @@ export default function Navbar({ settings, logoUrl }: { settings: any, logoUrl: 
           <img
             src={logoUrl}
             alt="Logo"
-            className="h-12 md:h-14 w-auto drop-shadow-[0_0_10px_rgba(255,255,255,0.2)] group-hover:scale-105 transition-transform"
+            className="h-16 md:h-20 w-auto drop-shadow-[0_0_10px_rgba(255,255,255,0.2)] group-hover:scale-105 transition-transform"
           />
           <div className="hidden md:flex flex-col font-logo">
             <span className="text-white font-bold tracking-[0.2em] text-sm md:text-base leading-none">MARLBOROUGH</span>
