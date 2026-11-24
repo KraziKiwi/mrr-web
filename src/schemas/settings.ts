@@ -20,7 +20,7 @@ export default {
       name: 'contactEmail',
       title: 'Form Submission Email',
       type: 'string',
-      description: 'The email address where leads should be sent (e.g., hello@mrr.au)',
+      description: 'The email address where leads should be sent (e.g., office@kkac.co.nz)',
     },
     {
       name: 'phone',

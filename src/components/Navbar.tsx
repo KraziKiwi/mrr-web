@@ -58,7 +58,7 @@ export default function Navbar({ settings, logoUrl }: { settings: any, logoUrl: 
 
           <div className="flex items-center space-x-6 border-l border-white/10 pl-6">
             <a href={`tel:${settings?.phone?.replace(/\s+/g, '')}`} className="text-mrr-white font-semibold text-sm tracking-widest hover:text-gray-300 transition-colors">
-              {settings?.phone || "0499 100 711"}
+              {settings?.phone || "03 319 6009"}
             </a>
             <a href="#contact" className="bg-mrr-white hover:bg-gray-200 text-black px-6 py-2.5 rounded-sm font-bold text-[11px] tracking-[0.2em] transition-colors">
               GET A QUOTE
@@ -97,7 +97,7 @@ export default function Navbar({ settings, logoUrl }: { settings: any, logoUrl: 
               ))}
               <div className="w-full h-px bg-white/10 my-4" />
               <a href={`tel:${settings?.phone?.replace(/\s+/g, '')}`} className="text-mrr-white font-semibold tracking-widest">
-                {settings?.phone || "0499 100 711"}
+                {settings?.phone || "03 319 6009"}
               </a>
               <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="bg-mrr-white text-black px-6 py-3 rounded-sm font-bold tracking-widest mx-auto mt-2">
                 GET A QUOTE

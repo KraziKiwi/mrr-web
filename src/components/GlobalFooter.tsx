@@ -34,8 +34,8 @@ export default function GlobalFooter({ settings, logoUrl }: { settings: any, log
           {/* Contact Col */}
           <div className="flex flex-col space-y-4">
             <h4 className="text-[10px] uppercase tracking-[0.2em] font-bold text-gray-400 mb-2">CONTACT</h4>
-            <a href={`tel:${settings?.phone?.replace(/\s+/g, '')}`} className="text-sm font-light text-gray-300 hover:text-mrr-white transition-colors">{settings?.phone || '0499 100 711'}</a>
-            <a href={`mailto:${settings?.contactEmail}`} className="text-sm font-light text-gray-300 hover:text-mrr-white transition-colors">{settings?.contactEmail || 'contact@mrr.au'}</a>
+            <a href={`tel:${settings?.phone?.replace(/\s+/g, '')}`} className="text-sm font-light text-gray-300 hover:text-mrr-white transition-colors">{settings?.phone || '03 319 6009'}</a>
+            <a href={`mailto:${settings?.contactEmail}`} className="text-sm font-light text-gray-300 hover:text-mrr-white transition-colors">{settings?.contactEmail || 'office@kkac.co.nz'}</a>
             <span className="text-sm font-light text-gray-300">mrr.au</span>
           </div>
 

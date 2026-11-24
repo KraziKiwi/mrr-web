@@ -291,14 +291,14 @@ export default function HomeClient({ heroData, settings, missionData, projects, 
               <div className="flex flex-col space-y-2 border-b border-white/10 pb-8">
                 <h4 className="text-[10px] uppercase tracking-[0.3em] font-bold text-gray-500 mb-2">Call</h4>
                 <a href={`tel:${settings?.phone?.replace(/\s+/g, '')}`} className="text-mrr-white font-heading text-2xl tracking-widest hover:text-gray-300 transition-colors">
-                  {settings?.phone || '0499 100 711'}
+                  {settings?.phone || '03 319 6009'}
                 </a>
               </div>
 
               <div className="flex flex-col space-y-2 border-b border-white/10 pb-8">
                 <h4 className="text-[10px] uppercase tracking-[0.3em] font-bold text-gray-500 mb-2">Email</h4>
                 <a href={`mailto:${settings?.contactEmail}`} className="text-mrr-white text-lg font-light tracking-wider hover:text-gray-300 transition-colors">
-                  {settings?.contactEmail || 'contact@mrr.au'}
+                  {settings?.contactEmail || 'office@kkac.co.nz'}
                 </a>
               </div>
 
