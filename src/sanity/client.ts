@@ -2,7 +2,7 @@ import { createClient } from 'next-sanity'
 import imageUrlBuilder from '@sanity/image-url'
 
 export const client = createClient({
-  projectId: '7ykhc4pr', // Your Sanity Project ID
+  projectId: 'do2yl846', // Your Sanity Project ID
   dataset: 'production',
   apiVersion: '2024-03-11',
   useCdn: false, // Set to true for production
@@ -16,7 +16,7 @@ export const client = createClient({
 // Client for fetching drafts (requires a token)
 export const getPreviewClient = (token?: string) => {
   return createClient({
-    projectId: '7ykhc4pr',
+    projectId: 'do2yl846',
     dataset: 'production',
     apiVersion: '2024-03-11',
     useCdn: false,
