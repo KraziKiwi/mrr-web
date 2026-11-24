@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netlify Forms Fallback</title>
+</head>
+<body>
+    <!-- This file is used by Netlify to detect forms and act as a POST target to bypass Next.js routing -->
+    <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+        <input type="hidden" name="form-name" value="contact" />
+        <input name="bot-field" />
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="tel" name="phone" />
+        <input type="text" name="suburb" />
+        <input type="radio" name="project_type" value="Renovations" />
+        <input type="radio" name="project_type" value="Additions" />
+        <input type="radio" name="project_type" value="New Builds" />
+        <select name="budget">
+            <option value="$500k - $1m">$500k - $1m</option>
+            <option value="$1m - $2m">$1m - $2m</option>
+            <option value="$2m+">$2m+</option>
+        </select>
+        <select name="timeline">
+            <option value="In 3-6 months">In 3-6 months</option>
+            <option value="In 6-12 months">In 6-12 months</option>
+            <option value="Just researching">Just researching</option>
+        </select>
+        <input type="radio" name="has_plans" value="Yes" />
+        <input type="radio" name="has_plans" value="Started" />
+        <input type="radio" name="has_plans" value="Not yet" />
+        <textarea name="message"></textarea>
+        <!-- Add file upload so Netlify knows to expect multipart data -->
+        <input type="file" name="file" />
+    </form>
+</body>
+</html>

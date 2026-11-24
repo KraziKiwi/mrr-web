@@ -1,0 +1,35 @@
+{
+  "name": "mrr-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build --no-lint",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@sanity/client": "^7.28.0",
+    "@sanity/presentation": "^1.15.5",
+    "@sanity/react-loader": "^1.10.0",
+    "framer-motion": "^11.0.8",
+    "lucide-react": "^0.428.0",
+    "next": "14.2.16",
+    "next-sanity": "^9.4.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "sanity": "^3.55.0",
+    "styled-components": "^6.1.11"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.5",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}
