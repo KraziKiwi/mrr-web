@@ -11,8 +11,8 @@ sharp('public/logo.jfif')
       const g = data[i+1];
       const b = data[i+2];
 
-      // Threshold for white (adjust if needed, 240 is very light gray/white)
-      if (r > 230 && g > 230 && b > 230) {
+      // Aggressive threshold for white and off-white/gray backgrounds
+      if (r > 150 && g > 150 && b > 150) {
         data[i+3] = 0; // Set alpha to 0 (transparent)
       }
     }
