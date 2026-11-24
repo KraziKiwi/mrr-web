@@ -18,7 +18,7 @@ export default function GlobalFooter({ settings, logoUrl }: { settings: any, log
               </div>
             </div>
             <p className="text-gray-500 font-light text-sm leading-relaxed max-w-xs">
-              Renovations, additions and new builds across Perth and the South West. Built to look forward to.
+              Fast, reliable towing and roadside assistance across Marlborough and the top of the South Island.
             </p>
           </div>
 
@@ -36,16 +36,16 @@ export default function GlobalFooter({ settings, logoUrl }: { settings: any, log
             <h4 className="text-[10px] uppercase tracking-[0.2em] font-bold text-gray-400 mb-2">CONTACT</h4>
             <a href={`tel:${settings?.phone?.replace(/\s+/g, '')}`} className="text-sm font-light text-gray-300 hover:text-mrr-white transition-colors">{settings?.phone || '03 319 6009'}</a>
             <a href={`mailto:${settings?.contactEmail}`} className="text-sm font-light text-gray-300 hover:text-mrr-white transition-colors">{settings?.contactEmail || 'office@kkac.co.nz'}</a>
-            <span className="text-sm font-light text-gray-300">mrr.au</span>
+            <span className="text-sm font-light text-gray-300">kkac.co.nz</span>
           </div>
 
           {/* Areas Col */}
           <div className="flex flex-col space-y-4">
             <h4 className="text-[10px] uppercase tracking-[0.2em] font-bold text-gray-400 mb-2">AREAS</h4>
-            <span className="text-sm font-light text-gray-300">Perth metro</span>
-            <span className="text-sm font-light text-gray-300">Bunbury & Australind</span>
-            <span className="text-sm font-light text-gray-300">Busselton & Dunsborough</span>
-            <span className="text-sm font-light text-gray-300">Margaret River & Augusta</span>
+            <span className="text-sm font-light text-gray-300">Kaikoura</span>
+            <span className="text-sm font-light text-gray-300">Marlborough</span>
+            <span className="text-sm font-light text-gray-300">Nelson / Tasman</span>
+            <span className="text-sm font-light text-gray-300">Canterbury</span>
           </div>
         </div>
 
