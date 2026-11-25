@@ -225,17 +225,7 @@ export default function HomeClient({ heroData, settings, missionData, projects, 
                     </div>
                   </div>
 
-                  <div className="flex flex-col space-y-2 mt-4">
-                    <label className="text-[10px] uppercase tracking-[0.2em] text-gray-500 font-bold ml-1">Rough Budget</label>
-                    <div className="relative">
-                      <select name="budget" defaultValue="Under $500" className="w-full bg-transparent border border-white/20 focus:border-mrr-white outline-none p-4 text-gray-300 appearance-none cursor-pointer transition-colors font-light text-sm">
-                        <option value="Under $500" className="bg-zinc-900 text-white">Under $500</option>
-                        <option value="$500 - $1,000" className="bg-zinc-900 text-white">$500 - $1,000</option>
-                        <option value="Over $1,000" className="bg-zinc-900 text-white">Over $1,000</option>
-                      </select>
-                      <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none opacity-50 text-xs">▼</div>
-                    </div>
-                  </div>
+
 
                   <div className="flex flex-col space-y-2 mt-4">
                     <label className="text-[10px] uppercase tracking-[0.2em] text-gray-500 font-bold ml-1">When do you need us?</label>
