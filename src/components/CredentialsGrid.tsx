@@ -7,12 +7,12 @@ import EditBadge from './EditBadge'
 
 export default function CredentialsGrid({ credentials = [], settings, isPreview }: { credentials?: any[], settings?: any, isPreview?: boolean }) {
   const defaultCreds = [
-    { title: 'REGISTERED BUILDING CONTRACTOR', description: 'WA Reg. No. [BC######]. Check it on the Building and Energy register.' },
-    { title: 'HOME INDEMNITY INSURANCE', description: 'Every eligible residential job over $20,000 is covered, as WA law requires.' },
+    { title: 'APPROVED AA', description: 'Roadservice & Recovery Contractor' },
+    { title: 'NZTA', description: 'Authorised WoF Inspector' },
     { title: 'PUBLIC LIABILITY', description: '$[x]m cover on every site.' },
-    { title: 'INDUSTRY MEMBERSHIP', description: '[HIA / Master Builders WA] member. Logos here once you join.' },
-    { title: 'ABN', description: '[xx xxx xxx xxx]' },
-    { title: 'AFTERCARE', description: 'A 3-month check-in after handover to make sure everything\'s right.' }
+    { title: 'MTA', description: 'Assured Repairer' },
+    { title: 'NZBN', description: 'Registered Business in New Zealand' },
+    { title: '', description: '' }
   ]
 
   const displayData = credentials?.length > 0 ? credentials : defaultCreds
