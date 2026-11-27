@@ -17,15 +17,34 @@ export default function StandardGallery({ settings, isPreview }: StandardGallery
   const heading = settings?.galleryHeading || "Recent Recoveries"
   const description = settings?.galleryDescription || "A look at some of our recent work across the Top of the South."
 
+  const defaultFallbackImages = [
+    '/gallery/1.jfif',
+    '/gallery/2.png',
+    '/gallery/3.jfif',
+    '/gallery/4.jfif',
+    '/gallery/5.jfif',
+    '/gallery/6.jfif',
+  ];
+
   const gallery = settings?.gallery || [];
   const displayTiles = [...gallery];
+
+  // Fill in fallbacks for the first 6 if empty
+  for (let i = 0; i < 6; i++) {
+    if (!displayTiles[i]) {
+      displayTiles[i] = { isFallback: true, fallbackUrl: defaultFallbackImages[i], title: 'Recovery' };
+    }
+  }
+
+  // Pad the rest to 12 slots for the UI grid
   while (displayTiles.length < 12) {
     displayTiles.push({ isPlaceholder: true });
   }
 
   const currentItem = displayTiles[activeIndex];
   const mainImage = currentItem?.image;
-  const isPlaceholder = currentItem?.isPlaceholder || !mainImage;
+  const isFallback = currentItem?.isFallback;
+  const isPlaceholder = currentItem?.isPlaceholder || (!mainImage && !isFallback);
 
   return (
     <section className="py-24 bg-[#0a0a0a] text-white relative z-10 border-t border-white/5 mx-5 md:mx-12">
@@ -65,12 +84,21 @@ export default function StandardGallery({ settings, isPreview }: StandardGallery
             </div>
           ) : (
             <div className="absolute inset-0 bg-gradient-to-br from-zinc-800 to-amber-950/20">
-               <img
-                 src={urlFor(mainImage, 1920, 1080).url()}
-                 alt={currentItem.title || "Gallery Image"}
-                 className="absolute inset-0 w-full h-full object-cover"
-                 draggable="false"
-               />
+               {isFallback ? (
+                 <img
+                   src={currentItem.fallbackUrl}
+                   alt={currentItem.title || "Gallery Image"}
+                   className="absolute inset-0 w-full h-full object-cover"
+                   draggable="false"
+                 />
+               ) : (
+                 <img
+                   src={urlFor(mainImage, 1920, 1080).url()}
+                   alt={currentItem.title || "Gallery Image"}
+                   className="absolute inset-0 w-full h-full object-cover"
+                   draggable="false"
+                 />
+               )}
                {currentItem.title && (
                  <div className="absolute bottom-6 left-6 bg-black/80 backdrop-blur-md border border-white/10 px-4 py-2 text-[10px] tracking-[0.2em] font-bold shadow-2xl">
                     {currentItem.title.toUpperCase()}
@@ -84,6 +112,7 @@ export default function StandardGallery({ settings, isPreview }: StandardGallery
         <div className="mt-8 grid grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-2 md:gap-3">
           {displayTiles.map((tile: any, idx: number) => {
              const hasImage = !!tile.image;
+             const hasFallback = !!tile.fallbackUrl;
              return (
               <button
                 key={idx}
@@ -92,7 +121,14 @@ export default function StandardGallery({ settings, isPreview }: StandardGallery
                   activeIndex === idx ? 'ring-2 ring-mrr-white ring-offset-2 ring-offset-[#0a0a0a] scale-105' : 'opacity-50 hover:opacity-100 grayscale hover:grayscale-0'
                 }`}
               >
-                {hasImage ? (
+                {hasFallback ? (
+                  <img
+                    src={tile.fallbackUrl}
+                    alt={`Thumbnail ${idx + 1}`}
+                    className="w-full h-full object-cover"
+                    draggable="false"
+                  />
+                ) : hasImage ? (
                   <img
                     src={urlFor(tile.image, 200, 150).url()}
                     alt={`Thumbnail ${idx + 1}`}
